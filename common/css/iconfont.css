@@ -1,0 +1,32 @@
+@font-face {font-family: "custom-icon";
+  src: url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAUcAAsAAAAACqAAAATPAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDQAqHcIZDATYCJAMYCw4ABCAFhREHXxscCREVpKOQfXFgntd0IrVFRd0ykjc17aND+Ei6z/Hw337tvj+zg3qonC0R80YoJA7J7DdEI5FaSETREtYHf9NeSLsLCXQtM7VTE3riXjgz+RKzvwVA/x/rV99cq8Mn9UJGmEV59smjX0i7KWUnTY+mP+breytqm9azoYwsOqiDknY7Hw6HeZ79M8kCxP4ink23w8Gk6vTNBOgULBGZql63KRgLXBYgtnv16ATWMrI4aIFp3Ax7M8gTrFg1Q7oBeMx/P/6RHgyoWBPwVmtb1bqi9Cvh3ReqV9Zom3Toh7NjfAgSaIIMsWt07qBlpIniy8stykEnRiJ9Jbwd//bFuy+VsCKMk95QiOMUKodgRUnLf14UoLIb8EuKxqMTCYeAr3FCk2o86CVQvQAOFXx/EX8+2nLAORMQG0CcAolNMzpJKDeWfpIrQJeVCvtjZdnOmCIUeYxt5nZYapdwn2USq9Noa7O6dxQ1IHrOzQChFgJ80141JG82laepaNyuu5pNW+loWjOmK0TloII05eBBQFwCccS3GoQ6jWhl83ZIz9sj28X+dN19IQifWd6WrDJj1C0uPyzfzjnUWGbOcgFduf32bpC/vfesZZd02VKuzFwM1EtEC+cyoc5aAtSL+29aSsbYDtyBVN/Ncj98P4SuvddzprHWPOjSt6tFagt9uaey1DjANtNHXbICPesTM08RIjrlwP9Telx+HLHxUfULD0I3POx0+L7zXvaBO4Fr7nac+aAp1Fj5uMHWS50s/JoX0DurCQxtuia2AqM55lYytGmabvgBXZtWMKF5QnOjqZ9daxo3kje3KSI9ukdGjnBMaEAf2ojIkVzTI6c5zkNYyv3Xqn2HI9qRDu3//di1e/LunRPTK07avQu5El7t0zRol/ZS+wgN5CCfSPpIjgi91NRGkoc9qPNgx0htSWl8R9UR4LB1LD2oNh+McEh9yIitTdl12WQ3WHOZYMrXmddi+bgMZW8mnwA+vC313crO1E0+l1T3LDtbVzmn1n3S2PuJ8vXMk8SvxcWDqj9T/5+5tYepj21sz60z/21bkgJoTveAgAlHg9T43OY8QMek7aXVqlksYCoriz6oT/xeV0vX3r0rhFjB4xtfqslq9Axv7x/d4P5Br7DY76tze7S/2n5ErMKnH26hTqoZpfc0j7Fk0oTFT4OoG0B6kTb+b+fheN6HdHAv/MPED9XxNmnTMB1olbG78M+nQrDoX+rKBD+hZCVBU8kLtxy5WOYKUPTF4Ws26qwr/p3eQU8PpR4JDhFESzRGlSpCUSLEwIxPhw18ESz4mqhTgiaHu3gYjyJZBkxaoBDh7TiS2NxFlLdn0IL/A6ykENANH4a45pFzphAdc2gvb4KD4gzjDWjiZLhcX6aSlWPV7v2NtoRBJpVV8B8lE3RCV7eG+BcmlMNtyGfbqxowwhE+93w7DIFhFXY4ab2orqemMaZvqieOmxdvgoPiDOMNaOJk0tP6YipZOVauv/ONtoRB3A0YQv8oEyXp0UBXt2HwS5lCa17ipny2vaoBUcpubvi8aDsGijCs5lkOJ62XHULrqdHNTKiyPq06vu9qb2sd/NASVaTI0YgSbR4OKV0wPdzoVoZ09JgXenI0sHKyr0VSuS+YhOXWEQi02QAA') format('woff2');
+}
+
+.custom-icon {
+  font-family: "custom-icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.custom-icon-xinwen:before {
+  content: "\e62b";
+}
+
+.custom-icon-yiyuan:before {
+  content: "\e6e1";
+}
+
+.custom-icon-keshi:before {
+  content: "\e67e";
+}
+
+.custom-icon-jiaotong:before {
+  content: "\e7ed";
+}
+
+.custom-icon-jiuzhenrenguanli:before {
+  content: "\e67d";
+}
+

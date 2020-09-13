@@ -1,0 +1,144 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [{
+		"path": "pages/home/index",
+		"style": {
+			"navigationBarTitleText": "鄱阳妇幼保健院"
+		}
+	},{
+		"path": "pages/situation/index",
+		"style": {
+			"navigationBarTitleText": "医院概况",
+			"h5": {
+				"titleNView": {
+					"buttons": [
+						{
+							"type": "menu"
+						}
+					]
+				}
+			}
+		}
+	}, {
+		"path": "pages/office/index",
+		"style": {
+			"navigationBarTitleText": "科室中心",
+			"h5": {
+				"titleNView": {
+					"buttons": [
+						{
+							"type": "menu"
+						}
+					]
+				}
+			}
+		}
+	}, {
+		"path": "pages/newsCat/index",
+		"style": {
+			"navigationBarTitleText": "新闻中心",
+			"h5": {
+				"titleNView": {
+					"buttons": [
+						{
+							"type": "menu"
+						}
+					]
+				}
+			}
+		}
+	}, {
+		"path": "pages/newsCat/newsList",
+		"style": {
+			"h5": {
+				"titleNView": {
+					"buttons": [
+						{
+							"type": "menu"
+						}
+					]
+				}
+			}
+		}
+	}, {
+		"path": "pages/newsCat/newsDetail"
+	}, {
+		"path": "pages/office/officeDetail",
+		"style": {
+			"h5": {
+				"titleNView": {
+					"buttons": [
+						{
+							"type": "menu"
+						}
+					]
+				}
+			}
+		}
+	}, {
+		"path": "pages/situation/brief",
+		"style": {
+			"h5": {
+				"titleNView": {
+					"buttons": [
+						{
+							"type": "menu"
+						}
+					]
+				}
+			}
+		}
+	}, {
+		"path": "pages/situation/briefDetail",
+		"style": {}
+	}, {
+		"path": "pages/office/doctorList",
+		"style": {
+			"h5": {
+				"titleNView": {
+					"buttons": [
+						{
+							"type": "menu"
+						}
+					]
+				}
+			}
+		}
+	}, {
+		"path": "pages/office/departmentBrief",
+		"style": {
+			"h5": {
+				"titleNView": {
+					"buttons": [
+						{
+							"type": "menu"
+						}
+					]
+				}
+			}
+		}
+	}, {
+		"path": "pages/office/doctorDetail"
+	}, {
+		"path": "pages/traffic/index",
+		"style": {
+			"h5": {
+				"titleNView": {
+					"buttons": [
+						{
+							"type": "menu"
+						}
+					]
+				}
+			}
+		}
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "鄱阳妇幼保健院",
+		"navigationBarBackgroundColor": "#FFF",
+		"backgroundColor": "#FFF"
+	}
+}

@@ -1,0 +1,41 @@
+ {
+  "data": [
+    {
+      "bannerId": "BN20200830213207",
+      "bannerName": "测试bnaner2",
+      "content": "测试地址",
+      "createDt": "2020-08-30 21:32:07",
+      "id": 6,
+      "platSource": "2",
+      "sort": "0",
+      "status": "1",
+      "updateDt": "2020-08-30 21:32:07",
+      "url": "http://www.jxszyy.com/upload/38/r/pc/images/banner/mobile1.jpg"
+    },
+    {
+      "bannerId": "BN20200830213201",
+      "bannerName": "测试bnaner1",
+      "content": "测试地址",
+      "createDt": "2020-08-30 21:32:02",
+      "id": 5,
+      "platSource": "2",
+      "sort": "0",
+      "status": "1",
+      "updateDt": "2020-08-30 21:32:02",
+      "url": "http://www.jxszyy.com/upload/38/r/pc/images/banner/mobile2.jpg"
+    },
+    {
+      "bannerId": "BN20200830211836",
+      "bannerName": "测试bnaner",
+      "content": "测试地址",
+      "createDt": "2020-08-30 21:18:36",
+      "id": 4,
+      "platSource": "1",
+      "sort": "0",
+      "status": "0",
+      "updateDt": "2020-08-30 21:18:36",
+      "url": "http://www.jxszyy.com/upload/38/r/pc/images/banner/mobile6.jpg"
+    }
+  ],
+  "success": true
+}

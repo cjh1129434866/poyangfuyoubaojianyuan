@@ -1,0 +1,148 @@
+
+.page{
+	width: 100%;
+	height: 100%;
+}
+.borderbox{
+	box-sizing: border-box;
+}
+.alignCenter{
+	text-align: center;
+}
+.alignRight{
+	text-align: right;
+}
+.baseBgColor{
+	background: #fff;
+}
+.baseFontColor{
+	color: #000;
+}
+.frontBgColor{
+	background: #598EFE;
+}
+
+.frontBgColorSimple{
+	background: #0099FF;
+}
+
+.frontBgGrayColor{
+	background: #F2F2F2;
+}
+.separateBgLine{
+	background: #F7F7FB;
+}
+.weakenBgColor{
+	background: #F8F7FC;
+}
+.weakenFontColor{
+	color: #8D99A3;
+}
+.hightLightText{
+	color: #598EFE;
+}
+.hightLightValColor{
+	color: #FF6600;
+}
+.borderColorBlue{
+  border-color: #598EFE;
+}
+.boxShadow1{
+	box-shadow: 0 10rpx 20rpx #EDEDED;
+}
+.fontSize24{
+	font-size: 24rpx;
+}
+.fontSize28{
+	font-size: 28rpx;
+}
+
+.fontSize30{
+	font-size: 30rpx;
+}
+
+.fontSize32{
+	font-size: 33rpx;
+}
+
+.borderRadius5{
+	border-radius: 5rpx;
+}
+
+.borderRadius10{
+	border-radius: 10rpx;
+}
+
+.borderRadius20{
+	border-radius: 20rpx;
+}
+
+.borderRadius40{
+	border-radius: 40rpx;
+}
+
+.borderRadius50per{
+	border-radius: 50%;
+}
+
+.heightLightTextColor{
+	color: #fff;
+}
+
+.fontWeight500{
+	font-weight: 500;
+}
+
+.fontWeightBold {
+	font-weight: bold;
+}
+
+.button-hover{
+	opacity: 0.7;
+}
+
+.borderBottom1{
+	border-bottom: 1rpx solid #ECEDF1;
+}
+
+.padding30{
+	padding: 30rpx;
+}
+
+/* 底部弹窗 */
+.select_items{
+	border-radius: 20rpx 20rpx 0 0;
+}
+.select_items .select_items_select{
+	padding: 30rpx 10rpx 0;
+	line-height: 100rpx;
+}
+.select_items .select_items_select .selected{
+	color: #598EFE;
+}
+.select_items .separate_line{
+	height: 10rpx;
+}
+.select_items .select_items_btn{
+	padding: 30rpx 0;
+}
+
+/* 插屏广告 */
+.advise_image {
+	position: relative;
+}
+
+.show_image {
+	width: 200px;
+	height: 200px;
+}
+
+.operate_text{
+	font-size: 40rpx;
+	color: #fff;
+	letter-spacing: 4rpx;;
+}
+
+img{
+	width: 100%;
+}
