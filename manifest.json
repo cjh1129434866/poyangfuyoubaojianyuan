@@ -51,6 +51,7 @@
         "router" : {
             "mode" : "history",
             "base" : ""
-        }
+        },
+        "domain" : "http://101.201.150.44:9001"
     }
 }
