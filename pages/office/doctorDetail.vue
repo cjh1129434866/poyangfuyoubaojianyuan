@@ -27,11 +27,11 @@
 			</view>
 		</view>
 		<!--  -->
-		<u-gap height="20" bg-color="#F3F4F6" margin-top='20' margin-bottom="20"></u-gap>
+		<!-- <u-gap height="20" bg-color="#F3F4F6" margin-top='20' margin-bottom="20"></u-gap>
 		<u-section title="医生二维码" :right="false" font-size="40" color="#828282"></u-section>
 		<view class="u-margin-top-20" style="width: 200rpx;height: 200rpx;">
 			<image :src="doctorInfo.qrcodeUrl" style="width: 100%; height: 100%;" mode=""></image>
-		</view>
+		</view> -->
 		<u-gap height="20" bg-color="#F3F4F6" margin-top='20' margin-bottom="20"></u-gap>
 		<u-section title="擅长治疗" :right="false" font-size="40" color="#828282"></u-section>
 		<view class="u-padding-top-20 u-padding-bottom-20">{{ doctorInfo.absorbedContent }}</view>
