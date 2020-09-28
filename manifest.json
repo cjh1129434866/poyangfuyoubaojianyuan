@@ -51,6 +51,8 @@
         "router" : {
             "mode" : "history",
             "base" : ""
-        }
+        },
+        "domain" : "http://mobile.jxspyxfybjy.com",
+        "title" : "鄱阳妇幼保健院"
     }
 }
