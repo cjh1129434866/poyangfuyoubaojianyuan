@@ -1,8 +1,10 @@
 <template>
 	<view class="news_detail u-padding-20">
-		<view class="u-flex u-row-between u-tips-color">
-			<span class="u-font-36">{{ newsDetail.newsTitle }}</span>
-			<span class="u-font-28">{{ newsDetail.createDt }}</span>
+		<view class="u-row-between u-tips-color">
+			<span class="u-font-36 u-line-1">{{ newsDetail.newsTitle }}</span>
+		</view>
+		<view class="u-font-28 u-tips-color">
+			{{ newsDetail.createDt }}
 		</view>
 		<u-parse :html="newsDetail.content" class="u-padding-top-40" style="overflow: hidden; line-height: 60rpx;"></u-parse>
 	</view>

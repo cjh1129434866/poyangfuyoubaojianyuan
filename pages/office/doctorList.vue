@@ -28,7 +28,7 @@
 				<view class="u-padding-top-80" v-show="!doctorListLeng" >
 					<u-empty mode="data" text="暂时没有医生数据"></u-empty>
 				</view>
-				<view class="u-padding-top-20 u-padding-bottom-20" v-show="doctorListLeng">
+				<view class="u-padding-top-20 u-padding-bottom-20" v-show="doctorListLeng" @tap="handleClickLoadMore">
 					<u-loadmore :status="loadStatus" :load-text="loadText"/>
 				</view>
 			</view>
@@ -105,6 +105,10 @@
 					this.secondClick = false
 					this.loadStatus = 'loadmore'
 				})
+			},
+			handleClickLoadMore() {
+				this.pagination.pageNum++
+				this.queryPyfbDoctorToMobile()
 			},
 			// 去详情页
 			handlerClickDoctor(item) {
