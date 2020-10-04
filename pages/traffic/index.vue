@@ -1,5 +1,5 @@
 <template>
-	<view class="traffice_guide" style="padding-bottom: 94rpx;">
+	<view class="traffice_guide" style="padding-bottom: 132rpx;">
 		<view style="width: 100%; height: 400rpx;">
 			<image src="/static/images/map.png" style="width: 100%;height: 100%;" mode="scaleToFill"></image>
 		</view>

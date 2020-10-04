@@ -1,5 +1,5 @@
 <template>
-	<view class="office_detail" style="padding-bottom: 94rpx;">
+	<view class="office_detail" style="padding-bottom: 132rpx;">
 		<view class="u-padding-20">
 			<ReactBtnItemGroup/>
 			<view class="brief">

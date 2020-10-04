@@ -1,5 +1,5 @@
 <template>
-	<view class="doctor_detail u-padding-20" style="padding-bottom: 94rpx;">
+	<view class="doctor_detail u-padding-top-20 u-padding-left-20 u-padding-right-20" style="padding-bottom: 132rpx;">
 		<!-- 头像 -->
 		<view class="u-flex u-padding-top-20 u-padding-bottom-20">
 			<view class="u-flex-1" style="height: 240rpx;">
@@ -8,21 +8,21 @@
 			<view class="u-padding-left-20 u-flex-3 " style="height: 240rpx;">
 				<view class="u-flex">
 					<span class="u-margin-right-20 u-font-36">{{ doctorInfo.doctorName }}</span>
-					<view>
+					<!-- <view>
 						<u-tag
 							class="u-margin-right-20"
 							v-for="(label, index) in doctorInfo.doctorLabel" 
 							:key="index" :text="label" mode="plain" size="mini" />
-					</view>
+					</view> -->
 				</view>
 				<view class="u-flex u-line-3 u-font-32 u-padding-top-20">
 					<span class="u-flex-1 u-margin-right-20"><text class="u-tips-color u-margin-right-10">性别:</text>{{ doctorInfo.sex === '1' ? '男' : '女' }}</span>
 					<span class="u-flex-1 u-margin-right-20"><text class="u-tips-color u-margin-right-10">职称:</text>{{ doctorInfo.doctorDuty }}</span>
-					<span class="u-flex-1 u-margin-right-20"><text class="u-tips-color u-margin-right-10">领域:</text>{{ doctorInfo.major }}</span>
+<!-- 					<span class="u-flex-1 u-margin-right-20"><text class="u-tips-color u-margin-right-10">领域:</text>{{ doctorInfo.major }}</span>
 					<span class="u-flex-1 u-margin-right-20"><text class="u-tips-color u-margin-right-10">毕业院校:</text>{{ doctorInfo.graduateSchool }}</span>
 					<span class="u-flex-1 u-margin-right-20"><text class="u-tips-color u-margin-right-10">民族:</text>{{ doctorInfo.nation }}</span>
 					<span class="u-flex-1 u-margin-right-20"><text class="u-tips-color u-margin-right-10">出生地:</text>{{ doctorInfo.nativePlace }}</span>
-					<span class="u-flex-1 u-margin-right-20"><text class="u-tips-color u-margin-right-10">出生日期:</text>{{ doctorInfo.birthday }}</span>
+					<span class="u-flex-1 u-margin-right-20"><text class="u-tips-color u-margin-right-10">出生日期:</text>{{ doctorInfo.birthday }}</span> -->
 				</view>
 			</view>
 		</view>

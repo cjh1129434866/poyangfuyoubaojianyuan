@@ -1,5 +1,5 @@
 <template>
-	<view class="department_brief u-padding-20" style="padding-bottom: 94rpx;">
+	<view class="department_brief u-padding-top-20 u-padding-left-20 u-padding-right-20" style="padding-bottom: 132rpx;">
 		<ReactBtnItemGroup activeItemName="brief"/>
 		<view class="content">
 			<u-section title="科室简介" :right="false" font-size="40" color="#828282"></u-section>

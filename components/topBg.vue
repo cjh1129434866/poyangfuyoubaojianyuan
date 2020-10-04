@@ -1,5 +1,5 @@
 <template>
-	<view class="bg" style="width: 750rpx; height: 240rpx;">
+	<view class="bg" style="width: 750rpx; height: 420rpx;">
 		<image :src="imgSrc" mode="" style="width: 100%; height: 100%;"></image>
 	</view>
 </template>

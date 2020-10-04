@@ -4,7 +4,7 @@
 		<TopBg imgSrc="/static/images/newcenter.jpg"/>
 		<!-- 新闻分类列表 -->
 		<!-- 概况 -->
-		<view class="content u-padding-top-20 u-padding-left-20 u-padding-right-20" style="padding-bottom: 94rpx;">
+		<view class="content u-padding-top-20 u-padding-left-20 u-padding-right-20" style="padding-bottom: 132px;">
 			<view class="u-padding-top-10 u-padding-bottom-40">
 				<u-section title="新闻中心" :right="false" font-size="40" color="#828282"></u-section>
 			</view>

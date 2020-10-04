@@ -1,9 +1,9 @@
 <template>
-	<view class="situtation" style="padding-bottom: 94rpx;">
+	<view class="situtation" style="padding-bottom: 132rpx;">
 		<!-- 大背景图 -->
 		<TopBg imgSrc="/static/images/bg1.jpg"/>
 		<!-- 概况 -->
-		<view class="content u-padding-top-20 u-padding-left-20 u-padding-right-20" style="padding-bottom: 94rpx;">
+		<view class="content u-padding-top-20 u-padding-left-20 u-padding-right-20">
 			
 			<!--  -->
 			<view class="u-padding-top-10 u-padding-bottom-40">

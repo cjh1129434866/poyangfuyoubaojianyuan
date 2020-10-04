@@ -1,5 +1,5 @@
 <template>
-	<view class="doctor_list u-padding-20" style="padding-bottom: 94rpx;">
+	<view class="doctor_list u-padding-top-20 u-padding-left-20 u-padding-right-20" style="padding-bottom: 132rpx;">
 		<ReactBtnItemGroup activeItemName="doctor"/>
 		<view class="u-padding-top-20">
 			<u-section title="科室医生" :right="false" font-size="40" color="#828282"></u-section>
