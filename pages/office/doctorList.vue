@@ -83,7 +83,6 @@
 					pageSize: this.pagination.pageSize,
 					pageNum: this.pagination.pageNum
 				}).then(res => {
-					console.log(res)
 					this.secondClick = false
 					this.loadStatus = 'loadmore'
 					if (res.list.length === 0 && this.pagination.pageNum !== 1) {
@@ -96,9 +95,13 @@
 					}
 					this.doctorList = this.doctorList.concat(res.list)
 					this.doctorList = this.doctorList.map(item => {
-						return {
-							...item,
-							doctorLabel: item.doctorLabel.split('|')
+						if (item.doctorLabel) {
+							return {
+								...item,
+								'doctorLabel': item.doctorLabel.split('|')
+							}
+						} else {
+							return item
 						}
 					})
 				}).catch(_ => {
