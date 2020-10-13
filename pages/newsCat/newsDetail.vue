@@ -1,12 +1,12 @@
 <template>
 	<view class="news_detail u-padding-20">
-		<view class="u-row-between u-tips-color">
-			<span class="u-font-36 u-line-1">{{ newsDetail.newsTitle }}</span>
+		<view class="u-row-between u-tips-color u-font-36">
+			{{ newsDetail.newsTitle }}
 		</view>
 		<view class="u-font-28 u-tips-color">
 			{{ newsDetail.createDt }}
 		</view>
-		<u-parse :html="newsDetail.content" class="u-padding-top-40" style="overflow: hidden; line-height: 60rpx;"></u-parse>
+		<u-parse :html="newsDetail.content" class="u-padding-top-40" style="overflow: hidden; line-height: 60rpx;text-align: left;"></u-parse>
 	</view>
 </template>
 
@@ -27,6 +27,7 @@
 					newsId: this.newsId
 				}).then(res => {
 					this.newsDetail = res
+					console.log(this.newsDetail.content)
 				})
 			}
 		},
@@ -39,3 +40,13 @@
 		}
 	}
 </script>
+
+<style lang="scss" scoped>
+	p span{
+		display: inline-block;
+		width: 100% !important;
+	}
+	p img{
+		width: 100% !important;
+	}
+</style>

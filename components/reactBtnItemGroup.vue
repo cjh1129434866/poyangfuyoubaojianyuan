@@ -5,18 +5,20 @@
 				:type="activeItemName === 'brief' ? '' : 'success'" 
 				class="u-margin-bottom-20" @tap="handleRectBtnClick('brief')">科室简介</u-button>
 			<u-button 
-				type="success" class="u-margin-bottom-20" 
-				@tap="handleRectBtnClick('activity')">科室动态</u-button>
+				:type="activeItemName === 'dynamic' ? '' : 'success'" 
+				class="u-margin-bottom-20" @tap="handleRectBtnClick('dynamic')">科室动态</u-button>
 			<u-button 
 				:type="activeItemName === 'doctor' ? '' : 'success'" 
 				class="u-margin-bottom-20" @tap="handleRectBtnClick('doctor')">科室医生</u-button>
 			<u-button 
 				type="success" class="u-margin-bottom-20"
 				@tap="handleRectBtnClick('work')">科室排班</u-button>
-			<u-button type="success" class="u-margin-bottom-20"
-				@tap="handleRectBtnClick('elegant')">科室风采</u-button>
-			<u-button type="success" class="u-margin-bottom-20"
-				@tap="handleRectBtnClick('honor')">科室荣誉</u-button>
+			<u-button
+				:type="activeItemName === 'elegant' ? '' : 'success'" 
+				class="u-margin-bottom-20" @tap="handleRectBtnClick('elegant')">科室风采</u-button>
+			<u-button 
+				:type="activeItemName === 'honor' ? '' : 'success'" 
+				class="u-margin-bottom-20" @tap="handleRectBtnClick('honor')">科室荣誉</u-button>
 		</view>
 		<u-toast ref="uToast" />
 	</view>
@@ -46,11 +48,8 @@
 							departmentName: this.departmentName
 						})
 						break;
-					case 'activity':
-						this.showToast({
-							type: 'warning',
-							title: '暂未开放'
-						})
+					case 'dynamic':
+						this.$u.route('/pages/office/dynamic')
 						break;
 					case 'doctor':
 						this.$u.route('/pages/office/doctorList', {
@@ -65,17 +64,11 @@
 						})
 						break;
 					case 'elegant':
-						this.showToast({
-							type: 'warning',
-							title: '暂未开放'
-						})
+						this.$u.route('/pages/office/elegant')
 						break;
 					case 'honor':
-						this.showToast({
-							type: 'warning',
-							title: '暂未开放'
-						})
-						break;				
+						this.$u.route('/pages/office/honor')
+						break;
 				}
 			},
 			showToast(obj) {

@@ -14,6 +14,7 @@
 					<OperateItem title="交通指南" iconClass="jiaotong" color="#43A4FF" pageUrl="/pages/traffic/index"/>
 					<OperateItem title="科室导航" iconClass="keshi" color="#A349A4" pageUrl="/pages/office/index"/>
 					<OperateItem title="就诊指南" iconClass="jiuzhenrenguanli" color="#99D9EA"/>
+					<OperateItem title="电子书" iconClass="addressbook-copy" color="#09C6B6" pageUrl="/pages/book/index"/>
 				</view>
 			</view>
 			<!-- 新闻咨询 -->

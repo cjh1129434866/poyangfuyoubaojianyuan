@@ -134,6 +134,71 @@
 				}
 			}
 		}
+	}, {
+		"path": "pages/office/dynamic",
+		"style": {
+			"h5": {
+				"titleNView": {
+					"buttons": [
+						{
+							"type": "menu"
+						}
+					]
+				}
+			}
+		}
+	},{
+		"path": "pages/office/elegant",
+		"style": {
+			"h5": {
+				"titleNView": {
+					"buttons": [
+						{
+							"type": "menu"
+						}
+					]
+				}
+			}
+		}
+	},{
+		"path": "pages/office/honor",
+		"style": {
+			"h5": {
+				"titleNView": {
+					"buttons": [
+						{
+							"type": "menu"
+						}
+					]
+				}
+			}
+		}
+	}, {
+		"path": "pages/book/index",
+		"style": {
+			"h5": {
+				"titleNView": {
+					"buttons": [
+						{
+							"type": "menu"
+						}
+					]
+				}
+			}
+		}
+	}, {
+		"path": "pages/book/bookDetail",
+		"style": {
+			"h5": {
+				"titleNView": {
+					"buttons": [
+						{
+							"type": "menu"
+						}
+					]
+				}
+			}
+		}
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

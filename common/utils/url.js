@@ -1,1 +1,1 @@
-export const BASE_URL = process.env.NODE_ENV === 'development' ? 'http://mobile.jxspyxfybjy.com/pyfb-mobile' : 'http://mobile.jxspyxfybjy.com/pyfb-mobile'
+export const BASE_URL = process.env.NODE_ENV === 'development' ? 'http://101.201.150.44:9002/pyfb-mobile' : 'http://mobile.jxspyxfybjy.com/pyfb-mobile'
