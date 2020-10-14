@@ -1,8 +1,9 @@
 <template>
-	<view class="bookDetail">
+	<view class="bookDetail" style="padding-bottom: 140rpx;">
 		<NavItem :show.sync="show" />
-		<view>
+		<view style="height: 100%; height: 100%;">
 			<web-view :webview-styles="webviewStyles" :src="ebookUrl"></web-view>
+			<!-- <iframe width="100%" height="100%" :src="ebookUrl" frameborder="0"></iframe> -->
 		</view>
 		<!-- 备案号 -->
 		<CopyRight />
@@ -18,7 +19,7 @@
 		data() {
 			return {
 				show: false,
-				ebookUrl: '',
+				ebookUrl: '/static/pdf/web/viewer.html?file=',
 				webviewStyles: {
 					progress: {
 						color: '#FF3333'
@@ -32,7 +33,9 @@
 			}
 		},
 		onLoad(params) {
-			this.ebookUrl = params.ebookUrl
+			console.log(params)
+			console.log(encodeURI(params.ebookUrl))
+			this.ebookUrl = this.ebookUrl + encodeURI(params.ebookUrl)
 		}
 	}
 </script>
