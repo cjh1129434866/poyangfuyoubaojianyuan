@@ -199,6 +199,19 @@
 				}
 			}
 		}
+	}, {
+		"path": "pages/office/work",
+		"style": {
+			"h5": {
+				"titleNView": {
+					"buttons": [
+						{
+							"type": "menu"
+						}
+					]
+				}
+			}
+		}
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

@@ -1,30 +1,29 @@
 <template>
-	<view class="bookDetail" style="padding-bottom: 140rpx;">
+	<view class="bookDetail">
 		<NavItem :show.sync="show" />
 		<view style="height: 100%; height: 100%;">
 			<web-view :webview-styles="webviewStyles" :src="ebookUrl"></web-view>
-			<!-- <iframe width="100%" height="100%" :src="ebookUrl" frameborder="0"></iframe> -->
 		</view>
-		<!-- 备案号 -->
-		<CopyRight />
 	</view>
 </template>
 
 <script>
-	import CopyRight from '@/components/copyRight.vue'
 	import NavItem from '@/components/navItem.vue';
 	export default {
 		name: 'BookDetail',
-		components: { NavItem, CopyRight },
+		components: { NavItem },
 		data() {
 			return {
 				show: false,
-				ebookUrl: '/static/pdf2/web/viewer.html?file=',
+				ebookUrl: '/static/pdf/web/viewer.html?file=',
 				webviewStyles: {
+					paddingBottom: '140px',
 					progress: {
 						color: '#FF3333'
 					}
-				}
+				},
+				isAndroid: window.navigator.userAgent.indexOf('Android') > -1 || window.navigator.userAgent.indexOf('Adr') > -1,
+				isIos: !!window.navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
 			}
 		},
 		onNavigationBarButtonTap(ev) {

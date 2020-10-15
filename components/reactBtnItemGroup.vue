@@ -11,8 +11,8 @@
 				:type="activeItemName === 'doctor' ? '' : 'success'" 
 				class="u-margin-bottom-20" @tap="handleRectBtnClick('doctor')">科室医生</u-button>
 			<u-button 
-				type="success" class="u-margin-bottom-20"
-				@tap="handleRectBtnClick('work')">科室排班</u-button>
+				:type="activeItemName === 'work' ? '' : 'success'" 
+				class="u-margin-bottom-20" @tap="handleRectBtnClick('work')">科室排班</u-button>
 			<u-button
 				:type="activeItemName === 'elegant' ? '' : 'success'" 
 				class="u-margin-bottom-20" @tap="handleRectBtnClick('elegant')">科室风采</u-button>
@@ -58,10 +58,7 @@
 						})
 						break;
 					case 'work':
-						this.showToast({
-							type: 'warning',
-							title: '暂未开放'
-						})
+						this.$u.route('/pages/office/work')
 						break;
 					case 'elegant':
 						this.$u.route('/pages/office/elegant')

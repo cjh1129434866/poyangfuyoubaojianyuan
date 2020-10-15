@@ -1861,6 +1861,7 @@ var validateFileURL = void 0;
       var fileOrigin = new URL(file, window.location.href).origin;
       if (fileOrigin !== viewerOrigin) {
      //   throw new Error('file origin does not match viewer\'s');
+				console.log('file origin does not match viewer\'s')
       }
     } catch (ex) {
       var message = ex && ex.message;
