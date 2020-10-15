@@ -19,7 +19,7 @@
 		data() {
 			return {
 				show: false,
-				ebookUrl: '/static/pdf/web/viewer.html?file=',
+				ebookUrl: '/static/pdf2/web/viewer.html?file=',
 				webviewStyles: {
 					progress: {
 						color: '#FF3333'
@@ -33,9 +33,7 @@
 			}
 		},
 		onLoad(params) {
-			console.log(params)
-			console.log(encodeURI(params.ebookUrl))
-			this.ebookUrl = this.ebookUrl + encodeURI(params.ebookUrl)
+			this.ebookUrl = this.ebookUrl + encodeURIComponent(params.ebookUrl)
 		}
 	}
 </script>
