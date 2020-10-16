@@ -4,7 +4,7 @@
 		<NavItem :show.sync="show" />
 		<view class="news u-padding-20">
 			<view class="u-padding-bottom-20">
-				<u-section title="新闻资讯" font-size="40" color="#828282" :right="false"></u-section>
+				<u-section title="科室动态" font-size="40" color="#828282" :right="false"></u-section>
 			</view>
 			<view class="news_list">
 				<view class="news_list_item u-padding-20 borderBottom1" v-for="item in newsList" :key="item.newsId" @tap="handlerClickItem(item)">
@@ -21,7 +21,7 @@
 			</view>
 		</view>
 		<view class="u-padding-top-80" v-show="!newsListLeng" >
-			<u-empty mode="news" text="暂时没有新闻资讯"></u-empty>
+			<u-empty mode="news" text="暂时没有科室动态"></u-empty>
 		</view>
 		<view class="u-padding-top-20 u-padding-bottom-20" v-show="newsListLeng">
 			<u-loadmore :status="loadStatus" :load-text="loadText"/>
@@ -63,16 +63,17 @@
 		},
 		methods: {
 			// 获取新闻列表
-			queryPyfbNewsToMobile() {
+			queryPyfbNewsDepartmentToMobile() {
 				if (this.secondClick) {
 					return
 				}
 				this.secondClick = true
-				this.$u.api.queryPyfbNewsToMobileApi({
+				this.$u.api.queryPyfbNewsDepartmentToMobileApi({
 					pageSize: this.pagination.pageSize,
 					pageNum: this.pagination.pageNum,
 					newsClassifyName: '科室动态'
 				}).then(res => {
+					console.log(res)
 					this.loadStatus = 'loadmore'
 					this.secondClick = false
 					if (res.list.length === 0 && this.pagination.pageNum !== 1) {
@@ -121,6 +122,9 @@
 				this.show = true
 			}
 		},
+		onLoad() {
+			this.queryPyfbNewsDepartmentToMobile()
+		}
 	}
 </script>
 

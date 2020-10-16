@@ -13,6 +13,7 @@ const getPyfbBriefInfoToMobile = 'com/pyfb/brief/getPyfbBriefInfoToMobile'
 const queryPyfbDoctorToMobile = 'com/pyfb/doctor/queryPyfbDoctorToMobile'
 const getPyfbDoctorToMobile = 'com/pyfb/doctor/getPyfbDoctorToMobile'
 const queryPyfbEbookToMobile = 'com/pyfb/ebook/queryPyfbEbookToMobile'
+const queryPyfbNewsDepartmentToMobile = 'com/pyfb/news/queryPyfbNewsDepartmentToMobile'
 // 此处第二个参数vm，就是我们在页面使用的this，你可以通过vm获取vuex等操作，更多内容详见uView对拦截器的介绍部分：
 // https://uviewui.com/js/http.html#%E4%BD%95%E8%B0%93%E8%AF%B7%E6%B1%82%E6%8B%A6%E6%88%AA%EF%BC%9F
 const install = (Vue, vm) => {
@@ -42,7 +43,8 @@ const install = (Vue, vm) => {
 	let getPyfbDoctorToMobileApi = (params = {}) => vm.$u.post(getPyfbDoctorToMobile, params)
 	// 获取电子书列表
 	let queryPyfbEbookToMobileApi = (params = {}) => vm.$u.post(queryPyfbEbookToMobile, params)
-	
+	// 科室动态 科室荣誉 科室风采 新闻列表
+	let queryPyfbNewsDepartmentToMobileApi = (params = {}) => vm.$u.post(queryPyfbNewsDepartmentToMobile, params)
 	// 将各个定义的接口名称，统一放进对象挂载到vm.$u.api(因为vm就是this，也即this.$u.api)下
 	vm.$u.api = {
 		queryPyfbBannerToMobileApi,
@@ -57,7 +59,8 @@ const install = (Vue, vm) => {
 		getPyfbBriefInfoToMobileApi,
 		queryPyfbDoctorToMobileApi,
 		getPyfbDoctorToMobileApi,
-		queryPyfbEbookToMobileApi
+		queryPyfbEbookToMobileApi,
+		queryPyfbNewsDepartmentToMobileApi
 	};
 }
 
