@@ -6,7 +6,7 @@
 				<image :src="doctorInfo.imageUrl" style="width: 100%;height: 100%;" mode="scaleToFill"></image>
 			</view>
 			<view class="u-padding-left-20 u-flex-3 " style="height: 240rpx;">
-				<view class="u-flex">
+				<view class="">
 					<span class="u-margin-right-20 u-font-36">{{ doctorInfo.doctorName }}</span>
 					<!-- <view>
 						<u-tag
@@ -15,9 +15,9 @@
 							:key="index" :text="label" mode="plain" size="mini" />
 					</view> -->
 				</view>
-				<view class="u-flex u-line-3 u-font-32 u-padding-top-20">
+				<view class="u-line-3 u-font-32 u-padding-top-20">
 					<span class="u-flex-1 u-margin-right-20"><text class="u-tips-color u-margin-right-10">性别:</text>{{ doctorInfo.sex === '1' ? '男' : '女' }}</span>
-					<span class="u-flex-1 u-margin-right-20"><text class="u-tips-color u-margin-right-10">职称:</text>{{ doctorInfo.doctorDuty }}</span>
+					<span class="u-flex-1 u-margin-right-20"><text class="u-tips-color u-margin-right-10">职务:</text>{{ doctorInfo.doctorDuty }}</span>
 <!-- 					<span class="u-flex-1 u-margin-right-20"><text class="u-tips-color u-margin-right-10">领域:</text>{{ doctorInfo.major }}</span>
 					<span class="u-flex-1 u-margin-right-20"><text class="u-tips-color u-margin-right-10">毕业院校:</text>{{ doctorInfo.graduateSchool }}</span>
 					<span class="u-flex-1 u-margin-right-20"><text class="u-tips-color u-margin-right-10">民族:</text>{{ doctorInfo.nation }}</span>

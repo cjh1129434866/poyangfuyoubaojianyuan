@@ -1,5 +1,5 @@
 <template>
-	<view class="dynamic">
+	<view class="dynamic" style="padding-bottom: 140rpx;">
 		<ReactBtnItemGroup activeItemName="dynamic"/>
 		<NavItem :show.sync="show" />
 		<view class="news u-padding-20">
@@ -23,7 +23,7 @@
 		<view class="u-padding-top-80" v-show="!newsListLeng" >
 			<u-empty mode="news" text="暂时没有科室动态"></u-empty>
 		</view>
-		<view class="u-padding-top-20 u-padding-bottom-20" v-show="newsListLeng">
+		<view class="u-padding-top-20 u-padding-bottom-20" v-show="newsListLeng" @tap="loadMore">
 			<u-loadmore :status="loadStatus" :load-text="loadText"/>
 		</view>
 		<u-toast ref="uToast" />
@@ -73,7 +73,6 @@
 					pageNum: this.pagination.pageNum,
 					newsClassifyName: '科室动态'
 				}).then(res => {
-					console.log(res)
 					this.loadStatus = 'loadmore'
 					this.secondClick = false
 					if (res.list.length === 0 && this.pagination.pageNum !== 1) {
@@ -113,6 +112,11 @@
 					newsTitle: item.newsTitle
 				});
 			},
+			loadMore() {
+				this.loadStatus = 'loading'
+				this.pagination.pageNum++;
+				this.queryPyfbNewsDepartmentToMobile()
+			},
 			showToast(obj) {
 				this.$refs.uToast.show(obj)
 			}
@@ -121,6 +125,9 @@
 			if (ev.type === 'menu') {
 				this.show = true
 			}
+		},
+		onReachBottom() {
+			this.loadMore()
 		},
 		onLoad() {
 			this.queryPyfbNewsDepartmentToMobile()

@@ -49,6 +49,7 @@
 		},
 		onLoad(params) {
 			this.departmentId = params.departmentId
+			uni.setStorageSync('departmentId', this.departmentId)
 			this.getPyfbDepartmentToMobile()
 			uni.setNavigationBarTitle({
 				title: params.departmentName

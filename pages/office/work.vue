@@ -1,7 +1,18 @@
 <template>
-	<view class="work">
+	<view class="work" style="padding-bottom: 140rpx;">
 		<ReactBtnItemGroup activeItemName="work"/>
 		<NavItem :show.sync="show" />
+		<view class="u-padding-20">
+			<view class="u-padding-bottom-20">
+				<u-section title="科室排班" font-size="40" color="#828282" :right="false"></u-section>
+			</view>
+			<view class="u-padding-top-20">
+				<u-parse :html="workUrl" class="u-tips-color u-font-30"></u-parse>
+			</view>
+			<view v-show="!workUrl" class="u-padding-top-80">
+				<u-empty text="暂无内容" mode="data"></u-empty>
+			</view>
+		</view>
 		<u-toast ref="uToast" />
 		<!-- 备案号 -->
 		<CopyRight />
@@ -17,7 +28,28 @@
 		components: { ReactBtnItemGroup, NavItem, CopyRight },
 		data() {
 			return {
-				show: false
+				show: false,
+				departmentId: '',
+				workUrl: ''
+			}
+		},
+		methods: {
+			getPyfbDepartmentWorkToMobile() {
+				this.$u.api.getPyfbDepartmentWorkToMobileApi({
+					departmentId: this.departmentId
+				}).then(res => {
+					if (res) {
+						this.workUrl = res.workUrl
+					} else {
+						this.showToast({
+							type: 'warning',
+							title: '暂时没有排班信息'
+						})
+					}
+				})
+			},
+			showToast(obj) {
+				this.$refs.uToast.show(obj)
 			}
 		},
 		onNavigationBarButtonTap(ev) {
@@ -25,6 +57,10 @@
 				this.show = true
 			}
 		},
+		onLoad() {
+			this.departmentId = uni.getStorageSync('departmentId')
+			this.getPyfbDepartmentWorkToMobile()
+		}
 	}
 </script>
 

@@ -1,10 +1,10 @@
 <template>
-	<view class="honor">
+	<view class="honor" style="padding-bottom: 140rpx;">
 		<ReactBtnItemGroup activeItemName="honor"/>
 		<NavItem :show.sync="show" />
 		<view class="news u-padding-20">
 			<view class="u-padding-bottom-20">
-				<u-section title="科室荣耀" font-size="40" color="#828282" :right="false"></u-section>
+				<u-section title="科室荣誉" font-size="40" color="#828282" :right="false"></u-section>
 			</view>
 			<view class="news_list">
 				<view class="news_list_item u-padding-20 borderBottom1" v-for="item in newsList" :key="item.newsId" @tap="handlerClickItem(item)">
@@ -21,9 +21,9 @@
 			</view>
 		</view>
 		<view class="u-padding-top-80" v-show="!newsListLeng" >
-			<u-empty mode="news" text="暂时没有科室荣耀"></u-empty>
+			<u-empty mode="news" text="暂时没有科室荣誉"></u-empty>
 		</view>
-		<view class="u-padding-top-20 u-padding-bottom-20" v-show="newsListLeng">
+		<view class="u-padding-top-20 u-padding-bottom-20" v-show="newsListLeng" @tap="loadMore">
 			<u-loadmore :status="loadStatus" :load-text="loadText"/>
 		</view>
 		<u-toast ref="uToast" />
@@ -71,9 +71,8 @@
 				this.$u.api.queryPyfbNewsDepartmentToMobileApi({
 					pageSize: this.pagination.pageSize,
 					pageNum: this.pagination.pageNum,
-					newsClassifyName: '科室荣耀'
+					newsClassifyName: '科室荣誉'
 				}).then(res => {
-					console.log(res)
 					this.loadStatus = 'loadmore'
 					this.secondClick = false
 					if (res.list.length === 0 && this.pagination.pageNum !== 1) {
@@ -113,6 +112,11 @@
 					newsTitle: item.newsTitle
 				});
 			},
+			loadMore() {
+				this.loadStatus = 'loading'
+				this.pagination.pageNum++;
+				this.queryPyfbNewsDepartmentToMobile()
+			},
 			showToast(obj) {
 				this.$refs.uToast.show(obj)
 			}
@@ -121,6 +125,9 @@
 			if (ev.type === 'menu') {
 				this.show = true
 			}
+		},
+		onReachBottom() {
+			this.loadMore()
 		},
 		onLoad() {
 			this.queryPyfbNewsDepartmentToMobile()
