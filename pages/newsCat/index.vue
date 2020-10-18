@@ -36,8 +36,11 @@
 		methods: {
 			// 获取新闻分类列表
 			queryPyfbNewsClassifyToMobile() {
-				this.$u.api.queryPyfbNewsClassifyToMobileApi().then(res => {
+				this.$u.api.queryPyfbNewsClassifyToMobileApi({
+					source: 0
+				}).then(res => {
 					this.newsClassify = res.list
+					this.newsClassify = this.newsClassify.filter(item=> item.classifyName !== '科室动态')
 				})
 			},
 			// 点击cell

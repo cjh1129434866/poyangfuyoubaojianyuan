@@ -93,7 +93,8 @@
 				this.loadStatus = 'loading'
 				this.$u.api.queryPyfbNewsToMobileIndexApi({
 					pageSize: this.pagination.pageSize,
-					pageNum: this.pagination.pageNum
+					pageNum: this.pagination.pageNum,
+					source: 0
 				}).then(res => {
 					this.loadStatus = 'loadmore'
 					this.secondClick = false

@@ -62,7 +62,8 @@
 				this.$u.api.queryPyfbNewsToMobileApi({
 					pageSize: this.pagination.pageSize,
 					pageNum: this.pagination.pageNum,
-					newsClassifyId: this.classifyId
+					newsClassifyId: this.classifyId,
+					source: 0
 				}).then(res => {
 					this.loadStatus = 'loadmore'
 					this.secondClick = false

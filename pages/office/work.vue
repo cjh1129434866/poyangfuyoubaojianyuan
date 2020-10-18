@@ -57,9 +57,12 @@
 				this.show = true
 			}
 		},
-		onLoad() {
-			this.departmentId = uni.getStorageSync('departmentId')
+		onLoad(params) {
+			this.departmentId = params.departmentId
 			this.getPyfbDepartmentWorkToMobile()
+			uni.setNavigationBarTitle({
+				title: params.departmentName
+			})
 		}
 	}
 </script>

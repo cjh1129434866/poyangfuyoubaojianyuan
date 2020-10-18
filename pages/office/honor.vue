@@ -54,6 +54,7 @@
 					nomore: '实在没有了'
 				},
 				loadStatus: 'loadmore',
+				departmentId: ''
 			}
 		},
 		computed: {
@@ -71,7 +72,9 @@
 				this.$u.api.queryPyfbNewsDepartmentToMobileApi({
 					pageSize: this.pagination.pageSize,
 					pageNum: this.pagination.pageNum,
-					newsClassifyName: '科室荣誉'
+					newsClassifyName: '科室荣誉',
+					departmentId: this.departmentId,
+					source: 1
 				}).then(res => {
 					this.loadStatus = 'loadmore'
 					this.secondClick = false
@@ -129,8 +132,12 @@
 		onReachBottom() {
 			this.loadMore()
 		},
-		onLoad() {
+		onLoad(params) {
+			this.departmentId = params.departmentId
 			this.queryPyfbNewsDepartmentToMobile()
+			uni.setNavigationBarTitle({
+				title: params.departmentName
+			})
 		}
 	}
 </script>

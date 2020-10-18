@@ -49,7 +49,10 @@
 						})
 						break;
 					case 'dynamic':
-						this.$u.route('/pages/office/dynamic')
+						this.$u.route('/pages/office/dynamic', {
+							departmentId: this.departmentId,
+							departmentName: this.departmentName
+						})
 						break;
 					case 'doctor':
 						this.$u.route('/pages/office/doctorList', {
@@ -58,13 +61,22 @@
 						})
 						break;
 					case 'work':
-						this.$u.route('/pages/office/work')
+						this.$u.route('/pages/office/work', {
+							departmentId: this.departmentId,
+							departmentName: this.departmentName
+						})
 						break;
 					case 'elegant':
-						this.$u.route('/pages/office/elegant')
+						this.$u.route('/pages/office/elegant', {
+							departmentId: this.departmentId,
+							departmentName: this.departmentName
+						})
 						break;
 					case 'honor':
-						this.$u.route('/pages/office/honor')
+						this.$u.route('/pages/office/honor', {
+							departmentId: this.departmentId,
+							departmentName: this.departmentName
+						})
 						break;
 				}
 			},
