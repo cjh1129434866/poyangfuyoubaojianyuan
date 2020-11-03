@@ -124,7 +124,6 @@
 			this.queryPyfbNewsToMobile()
 		},
 		onLoad(params) {
-			console.log(params)
 			this.classifyId = params.classifyId
 			this.queryPyfbNewsToMobile()
 			uni.setNavigationBarTitle({
